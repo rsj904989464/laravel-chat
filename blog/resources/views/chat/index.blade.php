@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@extends('layout.common')
+@section('t') {{$t}}  @endsection
 
-</body>
-</html>
+@section('content')
+    <p>{{$t}}</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+@endsection
