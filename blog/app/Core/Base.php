@@ -1,14 +1,15 @@
 <?php
-namespace App\Http\Controllers\Core;
+namespace App\Core;
 trait Base
 {
-    protected $data = null;
+    protected $data = [];
 
     function pre($data,$stop = true,$view = false){
         echo '<pre>';
-        print_r($data);
+        $data ? print_r($data):var_dump($data);
         echo '</pre>';
         $this->view = $view;
         if($stop) exit;
     }
+
 }

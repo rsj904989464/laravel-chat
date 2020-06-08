@@ -2,13 +2,12 @@
 
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Core\BaseController;
+use App\Core\BaseController;
 
 class ChatController extends BaseController
 {
 
     public function index(){
-        $this->data['t'] = 'chat';
-
+        $this->tdk['t'] = 'chat';
     }
 }

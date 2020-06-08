@@ -1,18 +1,20 @@
-<!-- 位于 resources/views/layouts/app.blade.php -->
-
 <html>
 <head>
-    <title>@yield('t')</title>
+    <title>{{$tdk['t']}}</title>
+    <meta name="keyword" content="{{$tdk['k']}}" />
+    <meta name="description" content="{{$tdk['d']}}" />
+    @php echo css(['layui/css/layui.css','css/global.css']);@endphp
 </head>
 <body>
 @include('layout.header')
 
-
-<div class="container">
-    @yield('content')
-</div>
-
+@php echo $content;@endphp
 
 @include('layout.footer')
+
+@php
+    echo js(['js/jquery-2.2.0.min.js','layui/layui.js']);
+    echo $insert2footer;
+@endphp
 </body>
 </html>
